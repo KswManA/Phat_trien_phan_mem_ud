@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
 public class AssetController {
 
     Asset_View view;
+
     public void AddAsset() {
 
         int noti;
@@ -25,8 +26,7 @@ public class AssetController {
         String loaiTS = view.getTxtLoaiTS().getText();
         String ttTS = view.getCbttTS().getSelectedItem().toString();
         String nguoiGiu = view.getTxtNguoiGiu().getText();
-        
-        
+
         if (maTS.isEmpty() || tenTS.isEmpty() || loaiTS.isEmpty() || nguoiGiu.isEmpty()) {
             noti = JOptionPane.showConfirmDialog(view, "Vui lòng điền đầy đủ thông tin", "Alert", JOptionPane.YES_OPTION);
             if (noti == JOptionPane.YES_OPTION) {
@@ -35,22 +35,23 @@ public class AssetController {
         }
     }
 
-    public void event() {
+    public void eventAddAsset() {
         view.getBtnAddAsset().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
                 AddAsset();
             }
         });
     }
-
+    public boolean eventAssetView(){
+        view.setVisible(true);
+        return true;
+    }
     public AssetController() {
     }
 
     public AssetController(Asset_View view) {
         this.view = view;
-        view.setVisible(true);
     }
-    
+
 }

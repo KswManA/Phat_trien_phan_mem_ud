@@ -15,7 +15,6 @@ public class Main {
     public static void main(String[] args) {
         Asset_View view = new Asset_View();
         AssetController cl = new AssetController();
-        view.setVisible(true);
-        cl.event();
+        
     }
 }
