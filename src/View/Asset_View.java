@@ -5,6 +5,11 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author NMHoang
@@ -49,22 +54,22 @@ public class Asset_View extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtMaTS = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtTenTS = new javax.swing.JTextField();
+        txtLoaiTS = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txtNguoiGiu = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        cbttTS = new javax.swing.JComboBox<>();
+        btnDeleteAsset = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnChangeAsset = new javax.swing.JButton();
+        btnSearchAsset = new javax.swing.JButton();
+        btnExcel = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tbAsset = new javax.swing.JTable();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -298,45 +303,45 @@ public class Asset_View extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Mã tài sản:");
 
-        jTextField1.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField1.setText("   Nhập mã tài sản");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtMaTS.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        txtMaTS.setForeground(new java.awt.Color(102, 102, 102));
+        txtMaTS.setToolTipText("");
+        txtMaTS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtMaTSActionPerformed(evt);
             }
         });
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setText("Tên tài sản:");
 
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField2.setText("   Nhập tên tài sản");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtTenTS.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        txtTenTS.setForeground(new java.awt.Color(102, 102, 102));
+        txtTenTS.setText("   Nhập tên tài sản");
+        txtTenTS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtTenTSActionPerformed(evt);
             }
         });
 
-        jTextField3.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField3.setText("   Nhập loại tài sản");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        txtLoaiTS.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        txtLoaiTS.setForeground(new java.awt.Color(102, 102, 102));
+        txtLoaiTS.setText("   Nhập loại tài sản");
+        txtLoaiTS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                txtLoaiTSActionPerformed(evt);
             }
         });
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel10.setText("Loại tài sản:");
 
-        jTextField4.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField4.setText("   Nhập người giữ");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        txtNguoiGiu.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        txtNguoiGiu.setForeground(new java.awt.Color(102, 102, 102));
+        txtNguoiGiu.setText("   Nhập người giữ");
+        txtNguoiGiu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                txtNguoiGiuActionPerformed(evt);
             }
         });
 
@@ -346,17 +351,17 @@ public class Asset_View extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel12.setText("Tình trạng TS:");
 
-        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "   Mới", "   Đã qua sử dụng", "   Đã Hỏng", "   " }));
+        cbttTS.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        cbttTS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "   Mới", "   Đã qua sử dụng", "   Đã Hỏng", "   " }));
 
-        jButton1.setBackground(new java.awt.Color(51, 153, 255));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton1.setText("Xóa");
-        jButton1.setMaximumSize(new java.awt.Dimension(100, 40));
-        jButton1.setMinimumSize(new java.awt.Dimension(100, 40));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteAsset.setBackground(new java.awt.Color(51, 153, 255));
+        btnDeleteAsset.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnDeleteAsset.setText("Xóa");
+        btnDeleteAsset.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnDeleteAsset.setMinimumSize(new java.awt.Dimension(100, 40));
+        btnDeleteAsset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnDeleteAssetActionPerformed(evt);
             }
         });
 
@@ -376,36 +381,36 @@ public class Asset_View extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(51, 153, 255));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton3.setText("Sửa");
-        jButton3.setMaximumSize(new java.awt.Dimension(100, 40));
-        jButton3.setMinimumSize(new java.awt.Dimension(100, 40));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnChangeAsset.setBackground(new java.awt.Color(51, 153, 255));
+        btnChangeAsset.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnChangeAsset.setText("Sửa");
+        btnChangeAsset.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnChangeAsset.setMinimumSize(new java.awt.Dimension(100, 40));
+        btnChangeAsset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnChangeAssetActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(51, 153, 255));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton4.setText("Tìm kiếm");
-        jButton4.setMaximumSize(new java.awt.Dimension(100, 40));
-        jButton4.setMinimumSize(new java.awt.Dimension(100, 40));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnSearchAsset.setBackground(new java.awt.Color(51, 153, 255));
+        btnSearchAsset.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnSearchAsset.setText("Tìm kiếm");
+        btnSearchAsset.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnSearchAsset.setMinimumSize(new java.awt.Dimension(100, 40));
+        btnSearchAsset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnSearchAssetActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(51, 153, 255));
-        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton5.setText("Xuất Exel");
-        jButton5.setMaximumSize(new java.awt.Dimension(100, 40));
-        jButton5.setMinimumSize(new java.awt.Dimension(100, 40));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnExcel.setBackground(new java.awt.Color(51, 153, 255));
+        btnExcel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnExcel.setText("Xuất Exel");
+        btnExcel.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnExcel.setMinimumSize(new java.awt.Dimension(100, 40));
+        btnExcel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnExcelActionPerformed(evt);
             }
         });
 
@@ -421,9 +426,9 @@ public class Asset_View extends javax.swing.JFrame {
                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, 0, 200, Short.MAX_VALUE))
+                    .addComponent(txtTenTS, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtMaTS, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cbttTS, 0, 200, Short.MAX_VALUE))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -432,22 +437,22 @@ public class Asset_View extends javax.swing.JFrame {
                             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(31, 31, 31)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(jTextField4))
+                            .addComponent(txtLoaiTS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(txtNguoiGiu))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSearchAsset, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnChangeAsset, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnDeleteAsset, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(180, 180, 180))
         );
         jPanel4Layout.setVerticalGroup(
@@ -458,38 +463,40 @@ public class Asset_View extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1))
+                            .addComponent(txtMaTS))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2))
+                            .addComponent(txtTenTS))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cbttTS, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(44, 44, 44))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3))
+                            .addComponent(txtLoaiTS))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4))
+                            .addComponent(txtNguoiGiu))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnSearchAsset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(29, 29, 29)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDeleteAsset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnChangeAsset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 
-        jTable3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        txtMaTS.getAccessibleContext().setAccessibleDescription("");
+
+        tbAsset.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        tbAsset.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null}
             },
@@ -505,8 +512,8 @@ public class Asset_View extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable3.setDragEnabled(true);
-        jScrollPane3.setViewportView(jTable3);
+        tbAsset.setDragEnabled(true);
+        jScrollPane3.setViewportView(tbAsset);
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -514,9 +521,11 @@ public class Asset_View extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3))
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 728, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
@@ -524,7 +533,7 @@ public class Asset_View extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -553,55 +562,144 @@ public class Asset_View extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtMaTSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaTSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtMaTSActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtTenTSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTenTSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtTenTSActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void txtLoaiTSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoaiTSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txtLoaiTSActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txtNguoiGiuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNguoiGiuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txtNguoiGiuActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnDeleteAssetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteAssetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnDeleteAssetActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnChangeAssetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeAssetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnChangeAssetActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnSearchAssetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchAssetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnSearchAssetActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnExcelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnExcelActionPerformed
 
     private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2MouseEntered
 
+    
+    public JButton getBtnChangeAsset() {
+        return btnChangeAsset;
+    }
+
+    public void setBtnChangeAsset(JButton btnChangeAsset) {
+        this.btnChangeAsset = btnChangeAsset;
+    }
+
+    public JButton getBtnDeleteAsset() {
+        return btnDeleteAsset;
+    }
+
+    public void setBtnDeleteAsset(JButton btnDeleteAsset) {
+        this.btnDeleteAsset = btnDeleteAsset;
+    }
+
+    public JButton getBtnExcel() {
+        return btnExcel;
+    }
+
+    public void setBtnExcel(JButton btnExcel) {
+        this.btnExcel = btnExcel;
+    }
+
+    public JButton getBtnSearchAsset() {
+        return btnSearchAsset;
+    }
+
+    public void setBtnSearchAsset(JButton btnSearchAsset) {
+        this.btnSearchAsset = btnSearchAsset;
+    }
+
+    public JComboBox<String> getCbttTS() {
+        return cbttTS;
+    }
+
+    public void setCbttTS(JComboBox<String> cbttTS) {
+        this.cbttTS = cbttTS;
+    }
+
+    public JTable getTbAsset() {
+        return tbAsset;
+    }
+
+    public void setTbAsset(JTable tbAsset) {
+        this.tbAsset = tbAsset;
+    }
+
+    public JTextField getTxtLoaiTS() {
+        return txtLoaiTS;
+    }
+
+    public void setTxtLoaiTS(JTextField txtLoaiTS) {
+        this.txtLoaiTS = txtLoaiTS;
+    }
+
+    public JTextField getTxtMaTS() {
+        return txtMaTS;
+    }
+
+    public void setTxtMaTS(JTextField txtMaTS) {
+        this.txtMaTS = txtMaTS;
+    }
+
+    public JTextField getTxtNguoiGiu() {
+        return txtNguoiGiu;
+    }
+
+    public void setTxtNguoiGiu(JTextField txtNguoiGiu) {
+        this.txtNguoiGiu = txtNguoiGiu;
+    }
+
+    public JTextField getTxtTenTS() {
+        return txtTenTS;
+    }
+
     /**
      * @param args the command line arguments
      */
+    public void setTxtTenTS(JTextField txtTenTS) {    
+        this.txtTenTS = txtTenTS;
+    }
+
+    public JButton getBtnAddAsset() {
+        return jButton2;
+    }
+
+    public void setBtnAddAsset(JButton btnAddAsset) {
+        this.jButton2 = btnAddAsset;
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+        */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -628,14 +726,14 @@ public class Asset_View extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnChangeAsset;
+    private javax.swing.JButton btnDeleteAsset;
+    private javax.swing.JButton btnExcel;
+    private javax.swing.JButton btnSearchAsset;
+    private javax.swing.JComboBox<String> cbttTS;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -663,10 +761,10 @@ public class Asset_View extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTable tbAsset;
+    private javax.swing.JTextField txtLoaiTS;
+    private javax.swing.JTextField txtMaTS;
+    private javax.swing.JTextField txtNguoiGiu;
+    private javax.swing.JTextField txtTenTS;
     // End of variables declaration//GEN-END:variables
 }
