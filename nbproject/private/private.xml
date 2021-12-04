@@ -2,6 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
             <file>file:/C:/Users/ADMIN/OneDrive%20-%20actvn.edu.vn/Desktop/PTPMUD/Phat_trien_phan_mem_ud/src/View/Register_View.java</file>
             <file>file:/C:/Users/ADMIN/OneDrive%20-%20actvn.edu.vn/Desktop/PTPMUD/Phat_trien_phan_mem_ud/src/View/Asset_View.java</file>
@@ -14,5 +17,6 @@
             <file>file:/C:/Users/ADMIN/OneDrive%20-%20actvn.edu.vn/Desktop/PTPMUD/Phat_trien_phan_mem_ud/src/View/assetlogo.png</file>
             <file>file:/C:/Users/ADMIN/OneDrive%20-%20actvn.edu.vn/Desktop/PTPMUD/Phat_trien_phan_mem_ud/src/Modal/JDBCConnection.java</file>
         </group>
+>>>>>>> a98bbf50e59a617c50a0abce387ba1e408aeaae2
     </open-files>
 </project-private>
