@@ -14,7 +14,7 @@ import View.Asset_View;
 public class Main {
     public static void main(String[] args) {
         Asset_View view = new Asset_View();
-        AssetController cl = new AssetController();
-        
+        AssetController cl = new AssetController(view);
+        cl.eventAdd();
     }
 }
