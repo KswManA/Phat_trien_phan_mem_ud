@@ -495,6 +495,8 @@ public class Asset_View extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
         );
 
+        txtMaTS.getAccessibleContext().setAccessibleName("");
+
         tbAsset.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tbAsset.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -7,16 +7,9 @@ package Controller;
 
 import model.Asset;
 import View.Asset_View;
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -39,6 +32,7 @@ public class AssetController {
 
         int noti;
         asModal = new Asset();
+
         asModal.setMaTS(view.getTxtMaTS().getText());
         asModal.setTenTS(view.getTxtTenTS().getText());
         asModal.setNguoiGiu(view.getTxtNguoiGiu().getText());
@@ -46,59 +40,25 @@ public class AssetController {
         asModal.setTtTS(view.getCbttTS().getSelectedItem().toString());
         if (asModal.maTS.isEmpty() || asModal.tenTS.isEmpty() || asModal.nguoiGiu.isEmpty()) {
             noti = JOptionPane.showConfirmDialog(view, "Vui lòng điền đầy đủ thông tin", "Alert", JOptionPane.YES_OPTION);
-            if (noti == JOptionPane.YES_OPTION) {
+            if (noti == JOptionPane.NO_OPTION) {
                 System.exit(0);
             }
         } else {
             System.out.println(asModal.toString());
+            // Thêm dữ liệu vào trong database
         }
     }
-
-    public void exportExcel(JTable table) {
-        JFileChooser chooser = new JFileChooser();
-        int i = chooser.showSaveDialog(chooser);
-        if (i == JFileChooser.APPROVE_OPTION) {
-            File file = chooser.getSelectedFile();
-            try {
-                FileWriter out = new FileWriter(file + ".xls");
-                BufferedWriter bwrite = new BufferedWriter(out);
-                DefaultTableModel model = (DefaultTableModel) table.getModel();
-                // ten Cot
-                for (int j = 0; j < table.getColumnCount(); j++) {
-                    bwrite.write(model.getColumnName(j) + "\t");
-                }
-                bwrite.write("\n");
-                // Lay du lieu dong
-                for (int j = 0; j < table.getRowCount(); j++) {
-                    for (int k = 0; k < table.getColumnCount(); k++) {
-                        bwrite.write(model.getValueAt(j, k) + "\t");
-                    }
-                    bwrite.write("\n");
-                }
-                bwrite.close();
-                JOptionPane.showMessageDialog(null, "Lưu file thành công!");
-            } catch (Exception e2) {
-                JOptionPane.showMessageDialog(null, "Lỗi khi lưu file!");
-            }
-        }
+    public void Table(){
+        // query dữ liệu trong db để insert vào bảng trong phần view
     }
-
     public void eventAdd() {
         view.getBtnAddAsset().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddAsset();
+                Table();
                 //To change body of generated methods, choose Tools | Templates.
             }
         });
     }
-    public void eventExcel(){
-        view.getBtnExcel().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                exportExcel(table);
-                 //To change body of generated methods, choose Tools | Templates.
-            }
-        });
-    }
-}
+}   
