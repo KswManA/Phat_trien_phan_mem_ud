@@ -10,10 +10,10 @@ package model;
  * @author HuyLQ
  */
 public class User {
-    private String hoTen;
-    private String eMail;
-    private int soDT;
-    private String chucVu;
+    public String hoTen;
+    public String eMail;
+    public int soDT;
+    public String chucVu;
 
     public User() {
     }
@@ -55,6 +55,11 @@ public class User {
 
     public void setChucVu(String chucVu) {
         this.chucVu = chucVu;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "hoTen=" + hoTen + ", eMail=" + eMail + ", soDT=" + soDT + ", chucVu=" + chucVu + '}';
     }
     
 }

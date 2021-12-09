@@ -10,6 +10,8 @@ import View.Asset_View;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -25,7 +27,8 @@ public class AssetController {
 
     public AssetController(Asset_View view) {
         this.view = view;
-        view.setVisible(true);
+        
+        
     }
 
     public void AddAsset() {
@@ -51,7 +54,7 @@ public class AssetController {
     public void Table(){
         // query dữ liệu trong db để insert vào bảng trong phần view
     }
-    public void eventAdd() {
+    public void EventAdd() {
         view.getBtnAddAsset().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,5 +63,10 @@ public class AssetController {
                 //To change body of generated methods, choose Tools | Templates.
             }
         });
+    }
+    public void EventViewAsset(JTable tbAsset){
+        view.setVisible(true);
+        DefaultTableModel deTable = (DefaultTableModel) tbAsset.getModel();
+        tbAsset.addRowSelectionInterval(0, 0);
     }
 }   

@@ -42,16 +42,16 @@ public class Asset_View extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        btnUserControl = new javax.swing.JLabel();
+        btnUserpro5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        btnUserAsset = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        btnHandover = new javax.swing.JLabel();
+        btnRecall = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
+        btnSignout = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -123,9 +123,14 @@ public class Asset_View extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 204, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(200, 70));
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1MouseClicked(evt);
+            }
+        });
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setText("Quản lý người dùng");
+        btnUserControl.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnUserControl.setText("Quản lý người dùng");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -133,58 +138,58 @@ public class Asset_View extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 22, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(btnUserControl)
                 .addGap(0, 22, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(btnUserControl)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel5.setPreferredSize(new java.awt.Dimension(200, 70));
+        btnUserpro5.setBackground(new java.awt.Color(51, 204, 0));
+        btnUserpro5.setPreferredSize(new java.awt.Dimension(200, 70));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setText("Quản lý thông tin");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnUserpro5Layout = new javax.swing.GroupLayout(btnUserpro5);
+        btnUserpro5.setLayout(btnUserpro5Layout);
+        btnUserpro5Layout.setHorizontalGroup(
+            btnUserpro5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnUserpro5Layout.createSequentialGroup()
                 .addGap(0, 31, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(0, 31, Short.MAX_VALUE))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        btnUserpro5Layout.setVerticalGroup(
+            btnUserpro5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnUserpro5Layout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel6.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel6.setPreferredSize(new java.awt.Dimension(200, 70));
+        btnUserAsset.setBackground(new java.awt.Color(51, 204, 0));
+        btnUserAsset.setPreferredSize(new java.awt.Dimension(200, 70));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setText("Quản lý tài sản");
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnUserAssetLayout = new javax.swing.GroupLayout(btnUserAsset);
+        btnUserAsset.setLayout(btnUserAssetLayout);
+        btnUserAssetLayout.setHorizontalGroup(
+            btnUserAssetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnUserAssetLayout.createSequentialGroup()
                 .addGap(0, 41, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(0, 41, Short.MAX_VALUE))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        btnUserAssetLayout.setVerticalGroup(
+            btnUserAssetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnUserAssetLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(0, 24, Short.MAX_VALUE))
@@ -193,8 +198,8 @@ public class Asset_View extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(51, 204, 0));
         jPanel7.setPreferredSize(new java.awt.Dimension(200, 70));
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel6.setText("Bàn giao tài sản");
+        btnHandover.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnHandover.setText("Bàn giao tài sản");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -202,58 +207,58 @@ public class Asset_View extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(0, 37, Short.MAX_VALUE)
-                .addComponent(jLabel6)
+                .addComponent(btnHandover)
                 .addGap(0, 38, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
-                .addComponent(jLabel6)
+                .addComponent(btnHandover)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel8.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel8.setPreferredSize(new java.awt.Dimension(200, 70));
+        btnRecall.setBackground(new java.awt.Color(51, 204, 0));
+        btnRecall.setPreferredSize(new java.awt.Dimension(200, 70));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText("Thu hồi tài sản");
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnRecallLayout = new javax.swing.GroupLayout(btnRecall);
+        btnRecall.setLayout(btnRecallLayout);
+        btnRecallLayout.setHorizontalGroup(
+            btnRecallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnRecallLayout.createSequentialGroup()
                 .addGap(0, 41, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(0, 42, Short.MAX_VALUE))
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        btnRecallLayout.setVerticalGroup(
+            btnRecallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnRecallLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel9.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel9.setPreferredSize(new java.awt.Dimension(200, 70));
+        btnSignout.setBackground(new java.awt.Color(51, 204, 0));
+        btnSignout.setPreferredSize(new java.awt.Dimension(200, 70));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setText("Đăng xuất");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnSignoutLayout = new javax.swing.GroupLayout(btnSignout);
+        btnSignout.setLayout(btnSignoutLayout);
+        btnSignoutLayout.setHorizontalGroup(
+            btnSignoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnSignoutLayout.createSequentialGroup()
                 .addGap(0, 60, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(0, 60, Short.MAX_VALUE))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        btnSignoutLayout.setVerticalGroup(
+            btnSignoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnSignoutLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(0, 24, Short.MAX_VALUE))
@@ -267,11 +272,11 @@ public class Asset_View extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(0, 25, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSignout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRecall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUserAsset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUserpro5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 25, Short.MAX_VALUE))
         );
@@ -282,15 +287,15 @@ public class Asset_View extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnUserpro5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnUserAsset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnRecall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSignout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -610,6 +615,10 @@ public class Asset_View extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAddAssetMouseClicked
 
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel1MouseClicked
+
     
     public JButton getBtnChangeAsset() {
         return btnChangeAsset;
@@ -654,7 +663,7 @@ public class Asset_View extends javax.swing.JFrame {
     public JTable getTbAsset() {
         return tbAsset;
     }
-
+    
     public void setTbAsset(JTable tbAsset) {
         this.tbAsset = tbAsset;
     }
@@ -740,17 +749,21 @@ public class Asset_View extends javax.swing.JFrame {
     private javax.swing.JButton btnChangeAsset;
     private javax.swing.JButton btnDeleteAsset;
     private javax.swing.JButton btnExcel;
+    private javax.swing.JLabel btnHandover;
+    private javax.swing.JPanel btnRecall;
     private javax.swing.JButton btnSearchAsset;
+    private javax.swing.JPanel btnSignout;
+    private javax.swing.JPanel btnUserAsset;
+    private javax.swing.JLabel btnUserControl;
+    private javax.swing.JPanel btnUserpro5;
     private javax.swing.JComboBox<String> cbttTS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -760,11 +773,7 @@ public class Asset_View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

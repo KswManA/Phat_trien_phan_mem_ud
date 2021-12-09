@@ -6,6 +6,7 @@
 package Controller;
 
 import View.Asset_View;
+import View.Register_View;
 
 /**
  *
@@ -14,7 +15,9 @@ import View.Asset_View;
 public class Main {
     public static void main(String[] args) {
         Asset_View view = new Asset_View();
+        Register_View regView = new Register_View();
         AssetController cl = new AssetController(view);
-        cl.eventAdd();
+        LoginRegisController lgController = new LoginRegisController(regView);
+        cl.EventViewAsset(view.setTbAsset());
     }
 }
