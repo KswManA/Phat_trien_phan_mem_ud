@@ -18,6 +18,6 @@ public class Main {
         Register_View regView = new Register_View();
         AssetController cl = new AssetController(view);
         LoginRegisController lgController = new LoginRegisController(regView);
-        cl.EventViewAsset(view.setTbAsset());
+        
     }
 }

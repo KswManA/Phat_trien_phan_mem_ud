@@ -7,11 +7,19 @@ package Controller;
 
 import model.Asset;
 import View.Asset_View;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
+import java.awt.Font;
+import java.awt.List;
+import java.awt.print.Book;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 
 /**
  *
@@ -27,46 +35,22 @@ public class AssetController {
 
     public AssetController(Asset_View view) {
         this.view = view;
-        
-        
     }
 
     public void AddAsset() {
+        //add vào db
+    }
 
-        int noti;
-        asModal = new Asset();
+    public void SearchAsset() {
+        //query db xong hiện lên bảng
+    }
 
-        asModal.setMaTS(view.getTxtMaTS().getText());
-        asModal.setTenTS(view.getTxtTenTS().getText());
-        asModal.setNguoiGiu(view.getTxtNguoiGiu().getText());
-        asModal.setLoaiTS(view.getTxtLoaiTS().getText());
-        asModal.setTtTS(view.getCbttTS().getSelectedItem().toString());
-        if (asModal.maTS.isEmpty() || asModal.tenTS.isEmpty() || asModal.nguoiGiu.isEmpty()) {
-            noti = JOptionPane.showConfirmDialog(view, "Vui lòng điền đầy đủ thông tin", "Alert", JOptionPane.YES_OPTION);
-            if (noti == JOptionPane.NO_OPTION) {
-                System.exit(0);
-            }
-        } else {
-            System.out.println(asModal.toString());
-            // Thêm dữ liệu vào trong database
-        }
+    public void MainExcel() throws Exception {
+        String exFileName = new String("D:\\Baitap\\Pt_pm_ud\\Output\\Excel.xlsx");
+        Workbook wb = new HSSFWorkbook();
+        OutputStream fOutput = new FileOutputStream(exFileName);
+        wb.write(fOutput);
+        fOutput.close();
+        wb.close();
     }
-    public void Table(){
-        // query dữ liệu trong db để insert vào bảng trong phần view
-    }
-    public void EventAdd() {
-        view.getBtnAddAsset().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                AddAsset();
-                Table();
-                //To change body of generated methods, choose Tools | Templates.
-            }
-        });
-    }
-    public void EventViewAsset(JTable tbAsset){
-        view.setVisible(true);
-        DefaultTableModel deTable = (DefaultTableModel) tbAsset.getModel();
-        tbAsset.addRowSelectionInterval(0, 0);
-    }
-}   
+}

@@ -14,7 +14,7 @@ public class User {
     public String eMail;
     public int soDT;
     public String chucVu;
-
+    public String passWord;
     public User() {
     }
 
@@ -23,6 +23,18 @@ public class User {
         this.eMail = eMail;
         this.soDT = soDT;
         this.chucVu = chucVu;
+    }
+
+    public User(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getHoTen() {
