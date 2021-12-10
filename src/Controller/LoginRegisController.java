@@ -29,6 +29,6 @@ public class LoginRegisController {
            //thêm thông tin vào trong db
     }
     public void Login(){
-        
+        //query data trong db rồi set vào modal
     }
 }
