@@ -5,7 +5,8 @@
  */
 package Controller;
 
-import View.Asset_View;
+import View.Login_View;
+
 
 /**
  *
@@ -13,8 +14,7 @@ import View.Asset_View;
  */
 public class Main {
     public static void main(String[] args) {
-        Asset_View view = new Asset_View();
-        AssetController cl = new AssetController();
-        
+        Login_View login = new Login_View();
+           login.setVisible(true);
     }
 }

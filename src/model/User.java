@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modal;
+package model;
 
 /**
  *
  * @author HuyLQ
  */
 public class User {
-    private String hoTen;
-    private String eMail;
-    private int soDT;
-    private String chucVu;
-
+    public String hoTen = "a";
+    public String eMail;
+    public int soDT;
+    public String chucVu;
+    public String passWord = "123";
     public User() {
     }
 
@@ -23,6 +23,18 @@ public class User {
         this.eMail = eMail;
         this.soDT = soDT;
         this.chucVu = chucVu;
+    }
+
+    public User(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getHoTen() {
@@ -55,6 +67,11 @@ public class User {
 
     public void setChucVu(String chucVu) {
         this.chucVu = chucVu;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "hoTen=" + hoTen + ", eMail=" + eMail + ", soDT=" + soDT + ", chucVu=" + chucVu + '}';
     }
     
 }

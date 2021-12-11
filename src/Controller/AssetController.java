@@ -5,10 +5,21 @@
  */
 package Controller;
 
+import model.Asset;
 import View.Asset_View;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
+import java.awt.Font;
+import java.awt.List;
+import java.awt.print.Book;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 
 /**
  *
@@ -17,36 +28,8 @@ import javax.swing.JOptionPane;
 public class AssetController {
 
     Asset_View view;
+    Asset asModal;
 
-    public void AddAsset() {
-
-        int noti;
-        String maTS = view.getTxtMaTS().getText();
-        String tenTS = view.getTxtTenTS().getText();
-        String loaiTS = view.getTxtLoaiTS().getText();
-        String ttTS = view.getCbttTS().getSelectedItem().toString();
-        String nguoiGiu = view.getTxtNguoiGiu().getText();
-
-        if (maTS.isEmpty() || tenTS.isEmpty() || loaiTS.isEmpty() || nguoiGiu.isEmpty()) {
-            noti = JOptionPane.showConfirmDialog(view, "Vui lòng điền đầy đủ thông tin", "Alert", JOptionPane.YES_OPTION);
-            if (noti == JOptionPane.YES_OPTION) {
-                System.exit(0);
-            }
-        }
-    }
-
-    public void eventAddAsset() {
-        view.getBtnAddAsset().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                AddAsset();
-            }
-        });
-    }
-    public boolean eventAssetView(){
-        view.setVisible(true);
-        return true;
-    }
     public AssetController() {
     }
 
@@ -54,4 +37,20 @@ public class AssetController {
         this.view = view;
     }
 
+    public void AddAsset() {
+        //add vào db
+    }
+
+    public void SearchAsset() {
+        //query db xong hiện lên bảng
+    }
+
+    public void MainExcel() throws Exception {
+        String exFileName = new String("D:\\Baitap\\Pt_pm_ud\\Output\\Excel.xlsx");
+        Workbook wb = new HSSFWorkbook();
+        OutputStream fOutput = new FileOutputStream(exFileName);
+        wb.write(fOutput);
+        fOutput.close();
+        wb.close();
+    }
 }

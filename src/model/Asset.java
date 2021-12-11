@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modal;
+package model;
 
 /**
  *
@@ -11,12 +11,12 @@ package Modal;
  */
 public class Asset {
 
-    private String maTS;
-    private String tenTS;
-    private String loaiTS;
-    private String nguoiGiu;
-    private String ttTS;
-    private int soLuong;
+    public String maTS;
+    public String tenTS;
+    public String loaiTS;
+    public String nguoiGiu;
+    public String ttTS;
+    public int soLuong;
 
     public Asset() {
     }
@@ -76,6 +76,11 @@ public class Asset {
 
     public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
+    }
+
+    @Override
+    public String toString() {
+        return "Asset{" + "maTS=" + maTS + ", tenTS=" + tenTS + ", loaiTS=" + loaiTS + ", nguoiGiu=" + nguoiGiu + ", ttTS=" + ttTS + ", soLuong=" + soLuong + '}';
     }
     
 }
