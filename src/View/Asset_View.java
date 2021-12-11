@@ -29,7 +29,7 @@ public class Asset_View extends javax.swing.JFrame {
         initComponents();
 
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,6 +38,7 @@ public class Asset_View extends javax.swing.JFrame {
     AssetController asCtrl = new AssetController();
     Asset asModal = new Asset();
     int noti;
+    JFrame jf;
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -50,17 +51,17 @@ public class Asset_View extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        labelRegis = new javax.swing.JPanel();
         btnUserControl = new javax.swing.JLabel();
-        btnUserpro5 = new javax.swing.JPanel();
+        labelUserInfo = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         btnUserAsset = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
+        labelHandover = new javax.swing.JPanel();
         btnHandover = new javax.swing.JLabel();
-        btnRecall = new javax.swing.JPanel();
+        labelRecall = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        btnSignout = new javax.swing.JPanel();
+        labelExit = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -105,6 +106,11 @@ public class Asset_View extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(79, 88, 88));
         jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel2.setPreferredSize(new java.awt.Dimension(250, 700));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(255, 0, 102));
         jPanel3.setPreferredSize(new java.awt.Dimension(250, 100));
@@ -130,58 +136,63 @@ public class Asset_View extends javax.swing.JFrame {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        jPanel1.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel1.setPreferredSize(new java.awt.Dimension(200, 70));
-        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        labelRegis.setBackground(new java.awt.Color(51, 204, 0));
+        labelRegis.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelRegis.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel1MouseClicked(evt);
+                labelRegisMouseClicked(evt);
             }
         });
 
         btnUserControl.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnUserControl.setText("Quản lý người dùng");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout labelRegisLayout = new javax.swing.GroupLayout(labelRegis);
+        labelRegis.setLayout(labelRegisLayout);
+        labelRegisLayout.setHorizontalGroup(
+            labelRegisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelRegisLayout.createSequentialGroup()
                 .addGap(0, 22, Short.MAX_VALUE)
                 .addComponent(btnUserControl)
                 .addGap(0, 22, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        labelRegisLayout.setVerticalGroup(
+            labelRegisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelRegisLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(btnUserControl)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        btnUserpro5.setBackground(new java.awt.Color(51, 204, 0));
-        btnUserpro5.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelUserInfo.setBackground(new java.awt.Color(51, 204, 0));
+        labelUserInfo.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelUserInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelUserInfoMouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setText("Quản lý thông tin");
 
-        javax.swing.GroupLayout btnUserpro5Layout = new javax.swing.GroupLayout(btnUserpro5);
-        btnUserpro5.setLayout(btnUserpro5Layout);
-        btnUserpro5Layout.setHorizontalGroup(
-            btnUserpro5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnUserpro5Layout.createSequentialGroup()
+        javax.swing.GroupLayout labelUserInfoLayout = new javax.swing.GroupLayout(labelUserInfo);
+        labelUserInfo.setLayout(labelUserInfoLayout);
+        labelUserInfoLayout.setHorizontalGroup(
+            labelUserInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelUserInfoLayout.createSequentialGroup()
                 .addGap(0, 31, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(0, 31, Short.MAX_VALUE))
         );
-        btnUserpro5Layout.setVerticalGroup(
-            btnUserpro5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnUserpro5Layout.createSequentialGroup()
+        labelUserInfoLayout.setVerticalGroup(
+            labelUserInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelUserInfoLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        btnUserAsset.setBackground(new java.awt.Color(51, 204, 0));
+        btnUserAsset.setBackground(new java.awt.Color(255, 255, 255));
         btnUserAsset.setPreferredSize(new java.awt.Dimension(200, 70));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -204,70 +215,85 @@ public class Asset_View extends javax.swing.JFrame {
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel7.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel7.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelHandover.setBackground(new java.awt.Color(51, 204, 0));
+        labelHandover.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelHandover.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelHandoverMouseClicked(evt);
+            }
+        });
 
         btnHandover.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnHandover.setText("Bàn giao tài sản");
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        javax.swing.GroupLayout labelHandoverLayout = new javax.swing.GroupLayout(labelHandover);
+        labelHandover.setLayout(labelHandoverLayout);
+        labelHandoverLayout.setHorizontalGroup(
+            labelHandoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelHandoverLayout.createSequentialGroup()
                 .addGap(0, 37, Short.MAX_VALUE)
                 .addComponent(btnHandover)
                 .addGap(0, 38, Short.MAX_VALUE))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        labelHandoverLayout.setVerticalGroup(
+            labelHandoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelHandoverLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(btnHandover)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        btnRecall.setBackground(new java.awt.Color(51, 204, 0));
-        btnRecall.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelRecall.setBackground(new java.awt.Color(51, 204, 0));
+        labelRecall.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelRecall.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelRecallMouseClicked(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText("Thu hồi tài sản");
 
-        javax.swing.GroupLayout btnRecallLayout = new javax.swing.GroupLayout(btnRecall);
-        btnRecall.setLayout(btnRecallLayout);
-        btnRecallLayout.setHorizontalGroup(
-            btnRecallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnRecallLayout.createSequentialGroup()
+        javax.swing.GroupLayout labelRecallLayout = new javax.swing.GroupLayout(labelRecall);
+        labelRecall.setLayout(labelRecallLayout);
+        labelRecallLayout.setHorizontalGroup(
+            labelRecallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelRecallLayout.createSequentialGroup()
                 .addGap(0, 41, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(0, 42, Short.MAX_VALUE))
         );
-        btnRecallLayout.setVerticalGroup(
-            btnRecallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnRecallLayout.createSequentialGroup()
+        labelRecallLayout.setVerticalGroup(
+            labelRecallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelRecallLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        btnSignout.setBackground(new java.awt.Color(51, 204, 0));
-        btnSignout.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelExit.setBackground(new java.awt.Color(51, 204, 0));
+        labelExit.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelExitMouseClicked(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setText("Đăng xuất");
 
-        javax.swing.GroupLayout btnSignoutLayout = new javax.swing.GroupLayout(btnSignout);
-        btnSignout.setLayout(btnSignoutLayout);
-        btnSignoutLayout.setHorizontalGroup(
-            btnSignoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnSignoutLayout.createSequentialGroup()
+        javax.swing.GroupLayout labelExitLayout = new javax.swing.GroupLayout(labelExit);
+        labelExit.setLayout(labelExitLayout);
+        labelExitLayout.setHorizontalGroup(
+            labelExitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelExitLayout.createSequentialGroup()
                 .addGap(0, 60, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(0, 60, Short.MAX_VALUE))
         );
-        btnSignoutLayout.setVerticalGroup(
-            btnSignoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnSignoutLayout.createSequentialGroup()
+        labelExitLayout.setVerticalGroup(
+            labelExitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelExitLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(0, 24, Short.MAX_VALUE))
@@ -281,12 +307,12 @@ public class Asset_View extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(0, 25, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSignout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRecall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelExit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelRecall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelHandover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnUserAsset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUserpro5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelRegis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 25, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -294,17 +320,17 @@ public class Asset_View extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelRegis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnUserpro5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnUserAsset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelHandover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnRecall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelRecall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnSignout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelExit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -655,9 +681,44 @@ public class Asset_View extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnAddAssetMouseClicked
 
-    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+    private void labelRegisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelRegisMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel1MouseClicked
+        jf = new Register_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelRegisMouseClicked
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel2MouseClicked
+
+    private void labelUserInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelUserInfoMouseClicked
+        // TODO add your handling code here:
+        jf = new Userinfo_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelUserInfoMouseClicked
+
+    private void labelHandoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelHandoverMouseClicked
+        // TODO add your handling code here:
+        jf = new Handover_Asset_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelHandoverMouseClicked
+
+    private void labelRecallMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelRecallMouseClicked
+        // TODO add your handling code here:
+        jf = new Recall_Asset_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelRecallMouseClicked
+
+    private void labelExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelExitMouseClicked
+        // TODO add your handling code here:
+        jf = new Login_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelExitMouseClicked
 
     /**
      * @param args the command line arguments
@@ -701,12 +762,9 @@ public class Asset_View extends javax.swing.JFrame {
     private javax.swing.JButton btnDeleteAsset;
     private javax.swing.JButton btnExcel;
     private javax.swing.JLabel btnHandover;
-    private javax.swing.JPanel btnRecall;
     private javax.swing.JButton btnSearchAsset;
-    private javax.swing.JPanel btnSignout;
     private javax.swing.JPanel btnUserAsset;
     private javax.swing.JLabel btnUserControl;
-    private javax.swing.JPanel btnUserpro5;
     private javax.swing.JComboBox<String> cbttTS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -719,16 +777,19 @@ public class Asset_View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable2;
+    private javax.swing.JPanel labelExit;
+    private javax.swing.JPanel labelHandover;
+    private javax.swing.JPanel labelRecall;
+    private javax.swing.JPanel labelRegis;
+    private javax.swing.JPanel labelUserInfo;
     private javax.swing.JTable tbAsset;
     private javax.swing.JTextField txtLoaiTS;
     private javax.swing.JTextField txtMaTS;

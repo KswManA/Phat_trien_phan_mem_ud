@@ -10,11 +10,11 @@ package model;
  * @author HuyLQ
  */
 public class User {
-    public String hoTen;
+    public String hoTen = "a";
     public String eMail;
     public int soDT;
     public String chucVu;
-    public String passWord;
+    public String passWord = "123";
     public User() {
     }
 

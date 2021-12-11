@@ -7,10 +7,12 @@ package View;
 
 import Controller.LoginRegisController;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import model.User;
+import View.Userinfo_View;
 
 /**
  *
@@ -32,6 +34,7 @@ public class Login_View extends javax.swing.JFrame {
      */
     User uModal = new User();
     LoginRegisController lrCtrl = new LoginRegisController();
+    Userinfo_View uInfo;
     int noti;
 
     @SuppressWarnings("unchecked")
@@ -186,10 +189,14 @@ public class Login_View extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
         lrCtrl.Login();
-        if (txtUsername.isEditable() || txtPassword.isEditable()) {
-            if (uModal.getHoTen().equals(txtUsername)) {
-                if (uModal.getPassWord().equals(txtPassword)) {
+        if (!(txtUsername.getText().equals("") && txtPassword.getText().equals(""))) {
+            if (txtUsername.getText().equals(uModal.getHoTen())) {
+                if (txtPassword.getText().equals(uModal.getPassWord())) {
                     System.out.println("Success");
+                    JFrame uInfo = new Userinfo_View();
+                    uInfo.setVisible(true);
+                    this.setVisible(false);
+                    
                 } else {
                     noti = JOptionPane.showConfirmDialog(btnLogin, "Vui lòng kiểm tra lại password", "Alert", JOptionPane.YES_OPTION);
                     if (noti == JOptionPane.NO_OPTION) {
@@ -198,7 +205,7 @@ public class Login_View extends javax.swing.JFrame {
                 }
             }
         } else {
-            noti = JOptionPane.showConfirmDialog(btnLogin, "Vui lòng nhập đầy đủ thông tin", "Alert", JOptionPane.YES_OPTION);
+            noti = JOptionPane.showConfirmDialog(btnLogin, "Vui lòng kiểm tra lại thông tin", "Alert", JOptionPane.YES_OPTION);
             if (noti == JOptionPane.NO_OPTION) {
                 System.exit(0);
             }

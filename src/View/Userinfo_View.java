@@ -5,6 +5,10 @@
  */
 package View;
 
+import View.Login_View;
+import java.awt.Cursor;
+import javax.swing.JFrame;
+
 /**
  *
  * @author NMHoang
@@ -18,6 +22,8 @@ public class Userinfo_View extends javax.swing.JFrame {
         initComponents();
     }
 
+    JFrame jf;
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,17 +40,17 @@ public class Userinfo_View extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        labelRegis = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
+        labelUserInfo = new javax.swing.JLabel();
+        labelAsset = new javax.swing.JPanel();
+        labelAssetView = new javax.swing.JLabel();
+        labelHangover = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        labelRecall = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
+        labelSignout = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
@@ -114,34 +120,50 @@ public class Userinfo_View extends javax.swing.JFrame {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        jPanel1.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel1.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelRegis.setBackground(new java.awt.Color(51, 204, 0));
+        labelRegis.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelRegis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelRegisMouseClicked(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Quản lý người dùng");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout labelRegisLayout = new javax.swing.GroupLayout(labelRegis);
+        labelRegis.setLayout(labelRegisLayout);
+        labelRegisLayout.setHorizontalGroup(
+            labelRegisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelRegisLayout.createSequentialGroup()
                 .addGap(0, 22, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(0, 22, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
+        labelRegisLayout.setVerticalGroup(
+            labelRegisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelRegisLayout.createSequentialGroup()
+                .addGap(0, 19, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(0, 24, Short.MAX_VALUE))
+                .addGap(0, 29, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(51, 204, 0));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setPreferredSize(new java.awt.Dimension(200, 70));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel4.setText("Quản lý thông tin");
+        labelUserInfo.setBackground(new java.awt.Color(255, 0, 51));
+        labelUserInfo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        labelUserInfo.setText("Quản lý thông tin");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -149,104 +171,124 @@ public class Userinfo_View extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(0, 31, Short.MAX_VALUE)
-                .addComponent(jLabel4)
+                .addComponent(labelUserInfo)
                 .addGap(0, 31, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
-                .addComponent(jLabel4)
+                .addComponent(labelUserInfo)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel6.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel6.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelAsset.setBackground(new java.awt.Color(51, 204, 0));
+        labelAsset.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelAsset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelAssetMouseClicked(evt);
+            }
+        });
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel5.setText("Quản lý tài sản");
+        labelAssetView.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        labelAssetView.setText("Quản lý tài sản");
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout labelAssetLayout = new javax.swing.GroupLayout(labelAsset);
+        labelAsset.setLayout(labelAssetLayout);
+        labelAssetLayout.setHorizontalGroup(
+            labelAssetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelAssetLayout.createSequentialGroup()
                 .addGap(0, 41, Short.MAX_VALUE)
-                .addComponent(jLabel5)
+                .addComponent(labelAssetView)
                 .addGap(0, 41, Short.MAX_VALUE))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        labelAssetLayout.setVerticalGroup(
+            labelAssetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelAssetLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
-                .addComponent(jLabel5)
+                .addComponent(labelAssetView)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel7.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel7.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelHangover.setBackground(new java.awt.Color(51, 204, 0));
+        labelHangover.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelHangover.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelHangoverMouseClicked(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setText("Bàn giao tài sản");
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        javax.swing.GroupLayout labelHangoverLayout = new javax.swing.GroupLayout(labelHangover);
+        labelHangover.setLayout(labelHangoverLayout);
+        labelHangoverLayout.setHorizontalGroup(
+            labelHangoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelHangoverLayout.createSequentialGroup()
                 .addGap(0, 37, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(0, 38, Short.MAX_VALUE))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        labelHangoverLayout.setVerticalGroup(
+            labelHangoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelHangoverLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel8.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel8.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelRecall.setBackground(new java.awt.Color(51, 204, 0));
+        labelRecall.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelRecall.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelRecallMouseClicked(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText("Thu hồi tài sản");
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        javax.swing.GroupLayout labelRecallLayout = new javax.swing.GroupLayout(labelRecall);
+        labelRecall.setLayout(labelRecallLayout);
+        labelRecallLayout.setHorizontalGroup(
+            labelRecallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelRecallLayout.createSequentialGroup()
                 .addGap(0, 42, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(0, 41, Short.MAX_VALUE))
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        labelRecallLayout.setVerticalGroup(
+            labelRecallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelRecallLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(0, 24, Short.MAX_VALUE))
         );
 
-        jPanel9.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel9.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelSignout.setBackground(new java.awt.Color(51, 204, 0));
+        labelSignout.setPreferredSize(new java.awt.Dimension(200, 70));
+        labelSignout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelSignoutMouseClicked(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setText("Đăng xuất");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        javax.swing.GroupLayout labelSignoutLayout = new javax.swing.GroupLayout(labelSignout);
+        labelSignout.setLayout(labelSignoutLayout);
+        labelSignoutLayout.setHorizontalGroup(
+            labelSignoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelSignoutLayout.createSequentialGroup()
                 .addGap(0, 60, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(0, 60, Short.MAX_VALUE))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        labelSignoutLayout.setVerticalGroup(
+            labelSignoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(labelSignoutLayout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(0, 24, Short.MAX_VALUE))
@@ -260,12 +302,12 @@ public class Userinfo_View extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(0, 25, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelSignout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelRecall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelHangover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelAsset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelRegis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 25, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -273,17 +315,17 @@ public class Userinfo_View extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelRegis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelAsset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelHangover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelRecall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelSignout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
 
@@ -471,6 +513,51 @@ public class Userinfo_View extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
+    private void labelRegisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelRegisMouseClicked
+        // TODO add your handling code here:  
+        jf = new Register_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelRegisMouseClicked
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void labelAssetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelAssetMouseClicked
+        // TODO add your handling code here:
+        jf = new Asset_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelAssetMouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void labelHangoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelHangoverMouseClicked
+        // TODO add your handling code here:
+        jf = new Handover_Asset_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelHangoverMouseClicked
+
+    private void labelRecallMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelRecallMouseClicked
+        // TODO add your handling code here:
+        jf = new Recall_Asset_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelRecallMouseClicked
+
+    private void labelSignoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelSignoutMouseClicked
+        // TODO add your handling code here:
+        jf = new Login_View();
+        jf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_labelSignoutMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -497,11 +584,12 @@ public class Userinfo_View extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Userinfo_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Userinfo_View().setVisible(true);
+                
             }
         });
     }
@@ -516,24 +604,17 @@ public class Userinfo_View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
@@ -548,5 +629,12 @@ public class Userinfo_View extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
     private javax.swing.JTextPane jTextPane5;
+    private javax.swing.JPanel labelAsset;
+    private javax.swing.JLabel labelAssetView;
+    private javax.swing.JPanel labelHangover;
+    private javax.swing.JPanel labelRecall;
+    private javax.swing.JPanel labelRegis;
+    private javax.swing.JPanel labelSignout;
+    private javax.swing.JLabel labelUserInfo;
     // End of variables declaration//GEN-END:variables
 }

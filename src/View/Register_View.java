@@ -7,6 +7,7 @@ package View;
 
 import Controller.LoginRegisController;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
@@ -34,7 +35,7 @@ public class Register_View extends javax.swing.JFrame {
     User uModal = new User();
     LoginRegisController lrCtrl = new LoginRegisController();
     int noti;
-    
+    JFrame jf;
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -258,6 +259,9 @@ public class Register_View extends javax.swing.JFrame {
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
+        jf = new Userinfo_View();
+        jf.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisActionPerformed
