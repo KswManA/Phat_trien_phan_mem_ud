@@ -11,12 +11,12 @@ package model;
  */
 public class Asset {
 
-    public String maTS;
-    public String tenTS;
-    public String loaiTS;
-    public String nguoiGiu;
-    public String ttTS;
-    public int soLuong;
+    public String maTS = "a";
+    public String tenTS="b";
+    public String loaiTS="c";
+    public String nguoiGiu="d";
+    public String ttTS="e";
+    public int soLuong=1;
 
     public Asset() {
     }

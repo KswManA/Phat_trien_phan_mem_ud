@@ -279,7 +279,7 @@ public class Register_View extends javax.swing.JFrame {
                     System.exit(0);
                 }
             } else {
-               uModal.setSoDT(Integer.parseInt(regNumber));
+               uModal.setSoDT(regNumber);
             }
         }
 

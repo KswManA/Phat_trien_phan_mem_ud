@@ -11,14 +11,14 @@ package model;
  */
 public class User {
     public String hoTen = "a";
-    public String eMail;
-    public int soDT;
-    public String chucVu;
+    public String eMail="abc@gmail.com";
+    public String soDT="0345";
+    public String chucVu="giaovien";
     public String passWord = "123";
     public User() {
     }
 
-    public User(String hoTen, String eMail, int soDT, String chucVu) {
+    public User(String hoTen, String eMail, String soDT, String chucVu) {
         this.hoTen = hoTen;
         this.eMail = eMail;
         this.soDT = soDT;
@@ -53,11 +53,11 @@ public class User {
         this.eMail = eMail;
     }
 
-    public int getSoDT() {
+    public String getSoDT() {
         return soDT;
     }
 
-    public void setSoDT(int soDT) {
+    public void setSoDT(String soDT) {
         this.soDT = soDT;
     }
 
