@@ -6,6 +6,8 @@
 package View;
 
 import Controller.AssetController;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
@@ -14,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 import model.Asset;
 
 /**
@@ -22,14 +25,29 @@ import model.Asset;
  */
 public class Asset_View extends javax.swing.JFrame {
 
+    public ArrayList<Asset> list;
+    DefaultTableModel model;
+
     /**
-     * Creates new form Userinfo_View
+     * Creates new form User info_View
      */
     public Asset_View() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        list = new AssetController().getListAsset();
+        model = (DefaultTableModel) tbAsset.getModel();
+        showTable(); //hien thi thong tin trong database
 
     }
-    
+
+    public void showTable() {
+        for (Asset a : list) {
+            model.addRow(new Object[]{
+                a.getMaTS(), a.getTenTS(), a.getLoaiTS(), a.getTtTS(), 1, a.getNguoiGiu(), a.getThoiGianTiepNhan()
+            });
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -391,7 +409,7 @@ public class Asset_View extends javax.swing.JFrame {
         jLabel12.setText("Tình trạng TS:");
 
         cbttTS.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        cbttTS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "   Mới", "   Đã qua sử dụng", "   Đã Hỏng", "   " }));
+        cbttTS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mới", "Đã qua sử dụng", "Đã Hỏng" }));
 
         btnDeleteAsset.setBackground(new java.awt.Color(51, 153, 255));
         btnDeleteAsset.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -626,20 +644,39 @@ public class Asset_View extends javax.swing.JFrame {
 
     private void btnAddAssetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAssetActionPerformed
 
-        asModal.setMaTS(txtMaTS.getText());
-        asModal.setTenTS(txtTenTS.getText());
-        asModal.setNguoiGiu(txtNguoiGiu.getText());
-        asModal.setLoaiTS(txtLoaiTS.getText());
-        asModal.setTtTS(cbttTS.getSelectedItem().toString());
-        if (asModal.maTS.isEmpty() || asModal.tenTS.isEmpty() || asModal.nguoiGiu.isEmpty()) {
+        String date = new String();
+        date = LocalDate.now().toString();
+        String maTS = txtMaTS.getText();
+        String tenTS = txtTenTS.getText();
+        String nguoGiu = txtNguoiGiu.getText();
+        String loaiTS = txtLoaiTS.getText();
+        String ttTS = cbttTS.getSelectedItem().toString();
+        System.out.println("");
+        if (maTS ==null || tenTS ==null || nguoGiu ==null || loaiTS == null) {
             noti = JOptionPane.showConfirmDialog(btnAddAsset, "Vui lòng điền đầy đủ thông tin", "Alert", JOptionPane.YES_OPTION);
             if (noti == JOptionPane.NO_OPTION) {
                 System.exit(0);
             }
         } else {
-            asCtrl.AddAsset();
+            // them vao db
+            
+            if (asCtrl.AddAsset(maTS,tenTS,nguoGiu,loaiTS,ttTS) == true) {
+                JOptionPane.showMessageDialog(rootPane, "Add Success !!!");
+                list.add(new Asset(maTS, tenTS, loaiTS, nguoGiu, ttTS, 1, loaiTS));
+                
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Add Fail !!!");
+            }
+            showResult();
         }
     }//GEN-LAST:event_btnAddAssetActionPerformed
+
+    public void showResult() {
+        Asset a = list.get(list.size() - 1);
+        model.addRow(new Object[]{
+            a.getMaTS(), a.getTenTS(), a.getLoaiTS(), a.getTtTS(), 1, a.getNguoiGiu(), a.getThoiGianTiepNhan()
+        });
+    }
 
     private void btnChangeAssetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeAssetActionPerformed
         // TODO add your handling code here:

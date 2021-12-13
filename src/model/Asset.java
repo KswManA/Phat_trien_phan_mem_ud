@@ -5,11 +5,15 @@
  */
 package model;
 
+import java.io.Serializable;
+import java.sql.Date;
+import java.time.LocalDate;
+
 /**
  *
  * @author HuyLQ
  */
-public class Asset {
+public class Asset implements Serializable{
 
     public String maTS;
     public String tenTS;
@@ -17,17 +21,19 @@ public class Asset {
     public String nguoiGiu;
     public String ttTS;
     public int soLuong;
+    public String ThoiGianTiepNhan;
 
     public Asset() {
     }
 
-    public Asset(String maTS, String tenTS, String loaiTS, String nguoiGiu, String ttTS, int soLuong) {
+    public Asset(String maTS, String tenTS, String loaiTS, String nguoiGiu, String ttTS, int soLuong, String ThoiGianTiepNhan) {
         this.maTS = maTS;
         this.tenTS = tenTS;
         this.loaiTS = loaiTS;
         this.nguoiGiu = nguoiGiu;
         this.ttTS = ttTS;
         this.soLuong = soLuong;
+        this.ThoiGianTiepNhan = ThoiGianTiepNhan;
     }
 
     public String getMaTS() {
@@ -78,9 +84,20 @@ public class Asset {
         this.soLuong = soLuong;
     }
 
+    public String getThoiGianTiepNhan() {
+        return ThoiGianTiepNhan;
+    }
+
+    public void setThoiGianTiepNhan(String ThoiGianTiepNhan) {
+        this.ThoiGianTiepNhan = ThoiGianTiepNhan;
+    }
+
     @Override
     public String toString() {
-        return "Asset{" + "maTS=" + maTS + ", tenTS=" + tenTS + ", loaiTS=" + loaiTS + ", nguoiGiu=" + nguoiGiu + ", ttTS=" + ttTS + ", soLuong=" + soLuong + '}';
+        return "Asset{" + "maTS=" + maTS + ", tenTS=" + tenTS + ", loaiTS=" + loaiTS + ", nguoiGiu=" + nguoiGiu + ", ttTS=" + ttTS + ", soLuong=" + soLuong + ", ThoiGianTiepNhan=" + ThoiGianTiepNhan + '}';
     }
+    
+    
+    
     
 }

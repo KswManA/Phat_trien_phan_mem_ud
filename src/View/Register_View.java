@@ -6,12 +6,14 @@
 package View;
 
 import Controller.LoginRegisController;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 import model.User;
 
 /**
@@ -19,12 +21,16 @@ import model.User;
  * @author NMHoang
  */
 public class Register_View extends javax.swing.JFrame {
-
+    
+    public ArrayList<User> listUser;
+    DefaultTableModel model;
     /**
      * Creates new form Login_View
      */
     public Register_View() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -296,7 +302,9 @@ public class Register_View extends javax.swing.JFrame {
                 System.exit(0);
             }
         } else {
-            lrCtrl.Regis();
+            if (lrCtrl.Regis(hoTen, PassWord) == true) {
+                
+            }
         }
     }//GEN-LAST:event_btnRegisActionPerformed
 

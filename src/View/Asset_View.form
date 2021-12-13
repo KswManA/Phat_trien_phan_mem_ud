@@ -706,11 +706,10 @@
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="   M&#x1edb;i"/>
-                    <StringItem index="1" value="   &#x110;&#xe3; qua s&#x1eed; d&#x1ee5;ng"/>
-                    <StringItem index="2" value="   &#x110;&#xe3; H&#x1ecf;ng"/>
-                    <StringItem index="3" value="   "/>
+                  <StringArray count="3">
+                    <StringItem index="0" value="M&#x1edb;i"/>
+                    <StringItem index="1" value="&#x110;&#xe3; qua s&#x1eed; d&#x1ee5;ng"/>
+                    <StringItem index="2" value="&#x110;&#xe3; H&#x1ecf;ng"/>
                   </StringArray>
                 </Property>
               </Properties>

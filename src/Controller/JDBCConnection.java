@@ -16,21 +16,26 @@ import java.util.logging.Logger;
  * @author ADMIN
  */
 public class JDBCConnection {
-    
-    public static Connection getJDBCConnection(){
-        
+
+    public static Connection con;
+
+    public static Connection getJDBCConnection() {
+
         final String url = "jdbc:mysql://localhost:3306/ptpmud";
         final String user = "root";
         final String password = "toandv";
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            return DriverManager.getConnection(url, user, password);
-        } catch (ClassNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        if (con == null) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = DriverManager.getConnection(url, user, password);
+                return con;
+            } catch (ClassNotFoundException ex) {
+                ex.printStackTrace();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
         }
-        return null;   
+        return null;
     }
-    
+
 }
