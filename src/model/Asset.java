@@ -15,6 +15,7 @@ import java.time.LocalDate;
  */
 public class Asset implements Serializable{
 
+<<<<<<< HEAD
     public String maTS;
     public String tenTS;
     public String loaiTS;
@@ -22,6 +23,14 @@ public class Asset implements Serializable{
     public String ttTS;
     public int soLuong;
     public String ThoiGianTiepNhan;
+=======
+    public String maTS = "a";
+    public String tenTS="b";
+    public String loaiTS="c";
+    public String nguoiGiu="d";
+    public String ttTS="e";
+    public int soLuong=1;
+>>>>>>> origin
 
     public Asset() {
     }
