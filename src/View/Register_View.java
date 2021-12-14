@@ -21,16 +21,17 @@ import model.User;
  * @author NMHoang
  */
 public class Register_View extends javax.swing.JFrame {
-    
+
     public ArrayList<User> listUser;
     DefaultTableModel model;
+
     /**
      * Creates new form Login_View
      */
     public Register_View() {
         initComponents();
         this.setLocationRelativeTo(null);
-        
+
     }
 
     /**
@@ -42,6 +43,7 @@ public class Register_View extends javax.swing.JFrame {
     LoginRegisController lrCtrl = new LoginRegisController();
     int noti;
     JFrame jf;
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -274,18 +276,18 @@ public class Register_View extends javax.swing.JFrame {
         // TODO add your handling code here:
         String regNumber;
         uModal = new User();
-        
+
         uModal.setHoTen(txtReUser.getText());
         uModal.seteMail(txtRegEmail.getText());
         regNumber = txtNumber.getText();
         for (char c : regNumber.toCharArray()) {
             if (!Character.isDigit(c)) {
-                 noti = JOptionPane.showConfirmDialog(btnRegis, "Vui lòng chỉ nhập số vào trường SĐT", "Alert", JOptionPane.YES_OPTION);
+                noti = JOptionPane.showConfirmDialog(btnRegis, "Vui lòng chỉ nhập số vào trường SĐT", "Alert", JOptionPane.YES_OPTION);
                 if (noti == JOptionPane.NO_OPTION) {
                     System.exit(0);
                 }
             } else {
-               uModal.setSoDT(regNumber);
+                uModal.setSoDT(regNumber);
             }
         }
 
@@ -296,14 +298,14 @@ public class Register_View extends javax.swing.JFrame {
             uModal.setChucVu("Thukho");
         }
 
-        if (uModal.hoTen.isEmpty() || uModal.eMail.isEmpty()|| uModal.chucVu.isEmpty()) {
+        if (uModal.hoTen.isEmpty() || uModal.eMail.isEmpty() || uModal.chucVu.isEmpty()) {
             noti = JOptionPane.showConfirmDialog(btnRegis, "Vui lòng điền đầy đủ thông tin", "Alert", JOptionPane.YES_OPTION);
             if (noti == JOptionPane.NO_OPTION) {
                 System.exit(0);
             }
         } else {
             if (lrCtrl.Regis(hoTen, PassWord) == true) {
-                
+
             }
         }
     }//GEN-LAST:event_btnRegisActionPerformed

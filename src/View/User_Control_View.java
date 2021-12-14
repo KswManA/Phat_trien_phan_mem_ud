@@ -26,8 +26,9 @@ public class User_Control_View extends javax.swing.JFrame {
     public User_Control_View() {
         initComponents();
     }
-AssetController asCtrl = new AssetController();
+    AssetController asCtrl = new AssetController();
     JFrame jf;
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -580,32 +581,30 @@ AssetController asCtrl = new AssetController();
     private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
         // TODO add your handling code here:
 
-    StringBuilder sb = new StringBuilder();
-    if(jTextField1.getText().equals("")){
-        sb.append("ten SV không được để trống");
-        jTextField1.setBackground(Color.red);
-    }else{
-        jTextField1.setBackground(Color.white);
-    }
-    if(sb.length()>0){
-        JOptionPane.showMessageDialog(this, sb);
-    }
-    try{
-        User user = new User();
-        user.setHoTen(jTextField1.getText());
-        User_control_Ctl userctl = new User_control_Ctl();
-        userctl.Delete(user);
-        JOptionPane.showMessageDialog(this, "User da duoc xoa");
-    }catch(Exception e)
-    {
-        JOptionPane.showMessageDialog(this, "Error"+ e.getMessage());
-        e.printStackTrace();
-    }
+        StringBuilder sb = new StringBuilder();
+        if (jTextField1.getText().equals("")) {
+            sb.append("ten SV không được để trống");
+            jTextField1.setBackground(Color.red);
+        } else {
+            jTextField1.setBackground(Color.white);
+        }
+        if (sb.length() > 0) {
+            JOptionPane.showMessageDialog(this, sb);
+        }
+        try {
+            User user = new User();
+            user.setHoTen(jTextField1.getText());
+            User_control_Ctl userctl = new User_control_Ctl();
+            userctl.Delete(user);
+            JOptionPane.showMessageDialog(this, "User da duoc xoa");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error" + e.getMessage());
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_DeleteBtnActionPerformed
 
     private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddBtnActionPerformed
         // TODO add your handling code here:
-
 
 
     }//GEN-LAST:event_AddBtnActionPerformed
@@ -613,63 +612,57 @@ AssetController asCtrl = new AssetController();
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 
-StringBuilder sb = new StringBuilder();
-if(jTextField1.getText().equals(""))
-{
- sb.append("ten SV không được để trống");
-jTextField1.setBackground(Color.red);
-}else{
-jTextField1.setBackground(Color.white);
-}
-if(sb.length()>0)
-{
-    JOptionPane.showMessageDialog(this, sb);
-}
-try
-{
-User user = new User();
-user.setHoTen(jTextField1.getText());
-user.geteMail(jTextField3.getText());
-user.getSoDT(jTextField2.getText());
-user.getChucVu();
- User_control_Ctl userctl = new User_control_Ctl();
-userctl.Update(user);
-JOptionPane.showMessageDialog(this, "User da duoc update");
-}catch(Exception e)
-{
-JOptionPane.showMessageDialog(this, "Error"+ e.getMessage());
-e.printStackTrace();
-}
+        StringBuilder sb = new StringBuilder();
+        if (jTextField1.getText().equals("")) {
+            sb.append("ten SV không được để trống");
+            jTextField1.setBackground(Color.red);
+        } else {
+            jTextField1.setBackground(Color.white);
+        }
+        if (sb.length() > 0) {
+            JOptionPane.showMessageDialog(this, sb);
+        }
+        try {
+            User user = new User();
+            user.setHoTen(jTextField1.getText());
+            user.geteMail(jTextField3.getText());
+            user.getSoDT(jTextField2.getText());
+            user.getChucVu();
+            User_control_Ctl userctl = new User_control_Ctl();
+            userctl.Update(user);
+            JOptionPane.showMessageDialog(this, "User da duoc update");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error" + e.getMessage());
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code herae:
-if(jTextField1.getText().equals("")){
-JOptionPane.showMessageDialog(this, "Nhap Ho Ten");
-return;}
-try
-{
-User user = new User();
-User_control_Ctl userCtl = new User_control_Ctl();
-if(userCtl != null)
-{jLabel1.setText(user.getHoTen());
-jLabel2.setText(user.getSoDT());
-jLabel3.setText(user.geteMail());
+        if (jTextField1.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Nhap Ho Ten");
+            return;
+        }
+        try {
+            User user = new User();
+            User_control_Ctl userCtl = new User_control_Ctl();
+            if (userCtl != null) {
+                jLabel1.setText(user.getHoTen());
+                jLabel2.setText(user.getSoDT());
+                jLabel3.setText(user.geteMail());
 
-}else{
-JOptionPane.showMessageDialog(this, "khong tim thay");
-}
-}
-catch(Exception e)
-{
-JOptionPane.showMessageDialog(this, "Error"+ e.getMessage());
-e.printStackTrace();
-}
+            } else {
+                JOptionPane.showMessageDialog(this, "khong tim thay");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error" + e.getMessage());
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jPanel2MouseClicked
 
     private void labelUserInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelUserInfoMouseClicked
@@ -708,51 +701,47 @@ e.printStackTrace();
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void AddBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddBtnMouseClicked
-                // TODO add your handling code here:
-    jButton3.setEnabled(false);
- DeleteBtn.setEnabled(false);
- jButton4.setEnabled(false);
-AddBtn.setEnabled(false);
-SaveBtn.setEnabled(true);
-jTextField1.setText("");
-jTextField2.setText("");
-jTextField3.setText("");
+        // TODO add your handling code here:
+        jButton3.setEnabled(false);
+        DeleteBtn.setEnabled(false);
+        jButton4.setEnabled(false);
+        AddBtn.setEnabled(false);
+        SaveBtn.setEnabled(true);
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
     }//GEN-LAST:event_AddBtnMouseClicked
 
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
-       // TODO add your handling code here:
-    StringBuilder sb = new StringBuilder();
-    if(jTextField1.getText().equals(""))
-{
- sb.append("ten SV không được để trống");
-jTextField1.setBackground(Color.red);
-}else{
-jTextField1.setBackground(Color.white);
-}
-if(sb.length()>0)
-{
-    JOptionPane.showMessageDialog(this, sb);
-}
-try
-{
-User user = new User();
-user.setHoTen(jTextField1.getText());
-user.geteMail(jTextField3.getText());
-user.getSoDT(jTextField2.getText());
-user.getChucVu();
- User_control_Ctl userctl = new User_control_Ctl();
-userctl.insert(user);
-JOptionPane.showMessageDialog(this, "User da duoc them");
-jButton3.setEnabled(true);
- DeleteBtn.setEnabled(true);
- jButton4.setEnabled(true);
-AddBtn.setEnabled(true);
-SaveBtn.setEnabled(false);
-}catch(Exception e)
-{
-JOptionPane.showMessageDialog(this, "Error"+ e.getMessage());
-e.printStackTrace();
-}
+        // TODO add your handling code here:
+        StringBuilder sb = new StringBuilder();
+        if (jTextField1.getText().equals("")) {
+            sb.append("ten SV không được để trống");
+            jTextField1.setBackground(Color.red);
+        } else {
+            jTextField1.setBackground(Color.white);
+        }
+        if (sb.length() > 0) {
+            JOptionPane.showMessageDialog(this, sb);
+        }
+        try {
+            User user = new User();
+            user.setHoTen(jTextField1.getText());
+            user.geteMail(jTextField3.getText());
+            user.getSoDT(jTextField2.getText());
+            user.getChucVu();
+            User_control_Ctl userctl = new User_control_Ctl();
+            userctl.insert(user);
+            JOptionPane.showMessageDialog(this, "User da duoc them");
+            jButton3.setEnabled(true);
+            DeleteBtn.setEnabled(true);
+            jButton4.setEnabled(true);
+            AddBtn.setEnabled(true);
+            SaveBtn.setEnabled(false);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error" + e.getMessage());
+            e.printStackTrace();
+        }
 
     }//GEN-LAST:event_SaveBtnActionPerformed
 
@@ -762,7 +751,7 @@ e.printStackTrace();
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-try {
+        try {
             // TODO add your handling code here:
             asCtrl.MainExcel();
         } catch (Exception ex) {

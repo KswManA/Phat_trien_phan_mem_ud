@@ -10,20 +10,15 @@ import View.Asset_View;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
-<<<<<<< HEAD
-import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
+
 import java.util.ArrayList;
-=======
-import java.util.ArrayList;
-import model.User;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
->>>>>>> origin
+
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -37,7 +32,6 @@ public class AssetController extends JDBCConnection {
 
     Asset_View view;
     Asset asModal = new Asset();
-
 
     public AssetController() {
         super();
@@ -65,7 +59,7 @@ public class AssetController extends JDBCConnection {
 //            ps.setDate(7, new Date(asModal.getThoiGianTiepNhan().getTime()));
 //            ps.setDate(7, );
             ps.setString(7, LocalDate.now().toString());
-           
+
             return ps.executeUpdate() > 0;
 
         } catch (Exception e) {
@@ -77,7 +71,7 @@ public class AssetController extends JDBCConnection {
 
     public ArrayList<Asset> getListAsset() {
         ArrayList<Asset> list = new ArrayList<>();
-       
+
         String sql = "select * from TaiSan";
         try {
             con = JDBCConnection.getJDBCConnection(); // gọi câu này nữa thì mới lấy được con 

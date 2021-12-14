@@ -15,7 +15,7 @@ import java.time.LocalDate;
  */
 public class Asset implements Serializable{
 
-<<<<<<< HEAD
+
     public String maTS;
     public String tenTS;
     public String loaiTS;
@@ -23,14 +23,8 @@ public class Asset implements Serializable{
     public String ttTS;
     public int soLuong;
     public String ThoiGianTiepNhan;
-=======
-    public String maTS = "a";
-    public String tenTS="b";
-    public String loaiTS="c";
-    public String nguoiGiu="d";
-    public String ttTS="e";
-    public int soLuong=1;
->>>>>>> origin
+
+
 
     public Asset() {
     }
@@ -43,6 +37,10 @@ public class Asset implements Serializable{
         this.ttTS = ttTS;
         this.soLuong = soLuong;
         this.ThoiGianTiepNhan = ThoiGianTiepNhan;
+    }
+
+    public Asset(String maTS, String tenTS, String loaiTS, String nguoiGiu, String ttTS, int soLuong) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getMaTS() {

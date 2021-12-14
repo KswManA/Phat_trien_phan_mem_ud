@@ -12,12 +12,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-<<<<<<< HEAD
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-=======
->>>>>>> origin
+
 import model.Asset;
 
 /**
